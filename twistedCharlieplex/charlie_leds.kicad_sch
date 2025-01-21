@@ -5,108 +5,6 @@
 	(uuid "0af6e736-d189-4348-98d9-6985a430682b")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.762) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:LED_Small"
 			(pin_numbers hide)
 			(pin_names
@@ -1873,7 +1771,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 77.47) (xy 35.56 77.47)
+			(xy 30.48 77.47) (xy 35.56 77.47)
 		)
 		(stroke
 			(width 0)
@@ -2363,7 +2261,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 54.61) (xy 124.46 54.61)
+			(xy 119.38 54.61) (xy 124.46 54.61)
 		)
 		(stroke
 			(width 0)
@@ -2403,7 +2301,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 69.85) (xy 35.56 69.85)
+			(xy 30.48 69.85) (xy 35.56 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2483,16 +2381,6 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 46.99) (xy 124.46 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2717c341-d3f6-43f5-8e4b-c975d41f4548")
-	)
-	(wire
-		(pts
 			(xy 168.91 85.09) (xy 177.8 85.09)
 		)
 		(stroke
@@ -2523,7 +2411,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 24.13) (xy 35.56 24.13)
+			(xy 30.48 24.13) (xy 35.56 24.13)
 		)
 		(stroke
 			(width 0)
@@ -2803,7 +2691,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 24.13) (xy 213.36 24.13)
+			(xy 208.28 24.13) (xy 213.36 24.13)
 		)
 		(stroke
 			(width 0)
@@ -2893,7 +2781,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 85.09) (xy 124.46 85.09)
+			(xy 119.38 85.09) (xy 124.46 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3383,7 +3271,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 54.61) (xy 213.36 54.61)
+			(xy 208.28 54.61) (xy 213.36 54.61)
 		)
 		(stroke
 			(width 0)
@@ -3553,7 +3441,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 54.61) (xy 35.56 54.61)
+			(xy 30.48 54.61) (xy 35.56 54.61)
 		)
 		(stroke
 			(width 0)
@@ -3623,7 +3511,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 31.75) (xy 213.36 31.75)
+			(xy 208.28 31.75) (xy 213.36 31.75)
 		)
 		(stroke
 			(width 0)
@@ -3803,7 +3691,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 31.75) (xy 124.46 31.75)
+			(xy 119.38 31.75) (xy 124.46 31.75)
 		)
 		(stroke
 			(width 0)
@@ -4463,7 +4351,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 85.09) (xy 35.56 85.09)
+			(xy 30.48 85.09) (xy 35.56 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4583,7 +4471,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 62.23) (xy 124.46 62.23)
+			(xy 119.38 62.23) (xy 124.46 62.23)
 		)
 		(stroke
 			(width 0)
@@ -5193,7 +5081,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 46.99) (xy 213.36 46.99)
+			(xy 208.28 46.99) (xy 213.36 46.99)
 		)
 		(stroke
 			(width 0)
@@ -5403,7 +5291,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 39.37) (xy 124.46 39.37)
+			(xy 119.38 39.37) (xy 124.46 39.37)
 		)
 		(stroke
 			(width 0)
@@ -5973,7 +5861,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 31.75) (xy 35.56 31.75)
+			(xy 30.48 31.75) (xy 35.56 31.75)
 		)
 		(stroke
 			(width 0)
@@ -6293,7 +6181,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 77.47) (xy 124.46 77.47)
+			(xy 119.38 77.47) (xy 124.46 77.47)
 		)
 		(stroke
 			(width 0)
@@ -6863,7 +6751,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 62.23) (xy 213.36 62.23)
+			(xy 208.28 62.23) (xy 213.36 62.23)
 		)
 		(stroke
 			(width 0)
@@ -7113,7 +7001,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 46.99) (xy 35.56 46.99)
+			(xy 30.48 46.99) (xy 35.56 46.99)
 		)
 		(stroke
 			(width 0)
@@ -7123,7 +7011,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 69.85) (xy 124.46 69.85)
+			(xy 119.38 69.85) (xy 124.46 69.85)
 		)
 		(stroke
 			(width 0)
@@ -7173,7 +7061,7 @@
 	)
 	(wire
 		(pts
-			(xy 111.76 24.13) (xy 124.46 24.13)
+			(xy 119.38 24.13) (xy 124.46 24.13)
 		)
 		(stroke
 			(width 0)
@@ -7623,6 +7511,16 @@
 	)
 	(wire
 		(pts
+			(xy 119.38 46.99) (xy 124.46 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c19ec867-c4a5-4b07-a498-3d52d3f36498")
+	)
+	(wire
+		(pts
 			(xy 147.32 77.47) (xy 151.13 77.47)
 		)
 		(stroke
@@ -7783,7 +7681,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 39.37) (xy 35.56 39.37)
+			(xy 30.48 39.37) (xy 35.56 39.37)
 		)
 		(stroke
 			(width 0)
@@ -8253,7 +8151,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 62.23) (xy 35.56 62.23)
+			(xy 30.48 62.23) (xy 35.56 62.23)
 		)
 		(stroke
 			(width 0)
@@ -9403,7 +9301,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 39.37) (xy 213.36 39.37)
+			(xy 208.28 39.37) (xy 213.36 39.37)
 		)
 		(stroke
 			(width 0)
@@ -9671,269 +9569,533 @@
 		)
 		(uuid "fff40167-b908-44be-8c90-abcc2b1aa8e5")
 	)
-	(label "IO7"
-		(at 24.13 77.47 0)
+	(global_label "IO23"
+		(shape input)
+		(at 208.28 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "13f4e6d7-c3d2-4803-b6c1-08fd4df17485")
+		(uuid "0d59a181-f480-4d7a-a159-81cb963244cd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.9405 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO25"
-		(at 201.93 62.23 0)
+	(global_label "IO7"
+		(shape input)
+		(at 30.48 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "19d3d585-292e-4ad1-929a-fa377a5eb120")
+		(uuid "24b5d199-2c67-4ec1-9193-a6f30b8bf713")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO16"
-		(at 113.03 69.85 0)
+	(global_label "IO17"
+		(shape input)
+		(at 119.38 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "2a781762-25d2-4afa-b0cb-3cd2cd4abc55")
+		(uuid "2aa11a3f-fc55-4ba7-a0dc-d48d45f809af")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO0"
-		(at 24.13 24.13 0)
+	(global_label "IO11"
+		(shape input)
+		(at 119.38 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "34d9553e-2f90-46f8-a6b6-b0c9b59b06dc")
+		(uuid "2d4389a3-4232-4e24-b871-675c1dc69b88")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO24"
-		(at 201.93 54.61 0)
+	(global_label "IO21"
+		(shape input)
+		(at 208.28 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "3c491889-276f-4ee3-88c3-4a989abcf594")
+		(uuid "49dcb534-fe93-4850-b067-2f7bc74e3da8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.9405 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO17"
-		(at 113.03 77.47 0)
+	(global_label "IO10"
+		(shape input)
+		(at 119.38 24.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "46a39765-1e67-47ed-9d39-2caba6faa196")
+		(uuid "50ffded9-b7c3-4688-aeaa-ca176c75de8c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO15"
-		(at 113.03 62.23 0)
+	(global_label "IO13"
+		(shape input)
+		(at 119.38 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "6f9d1a5c-64b3-4784-ad8d-dd1dd16bd707")
+		(uuid "634cba62-b3d0-4976-b826-550f9f6dad4a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO3"
-		(at 24.13 46.99 0)
+	(global_label "IO15"
+		(shape input)
+		(at 119.38 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "7bf2d646-ff70-4c26-846a-c4e3c0f297ff")
+		(uuid "6b462f46-6fd2-44fd-8fe2-f1bd2ef10d20")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO14"
-		(at 113.03 54.61 0)
+	(global_label "IO1"
+		(shape input)
+		(at 30.48 31.75 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "805276c9-5e24-4cce-9380-5ed7f9421aab")
+		(uuid "762ca0f5-22d0-41f9-92c1-db606e6e5fec")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO12"
-		(at 113.03 39.37 0)
+	(global_label "IO8"
+		(shape input)
+		(at 30.48 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "8329701a-b697-4888-a94b-348dee3e922f")
+		(uuid "7e98a8fd-405c-46f1-8a2e-31892427e4bc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO22"
-		(at 201.93 39.37 0)
+	(global_label "IO2"
+		(shape input)
+		(at 30.48 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "8415a309-00d7-48d8-b8ce-a931333c7a83")
+		(uuid "7e998924-c720-4d84-877b-118f0feeaf08")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO10"
-		(at 113.03 24.13 0)
+	(global_label "IO24"
+		(shape input)
+		(at 208.28 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "84c88cbf-a897-40fd-bc50-cc7d14bfa7ab")
+		(uuid "8058f472-3cb2-4f92-ac12-830ea59092e4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.9405 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO6"
-		(at 24.13 69.85 0)
+	(global_label "IO22"
+		(shape input)
+		(at 208.28 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "85c78a98-2fae-4662-b9f1-92db6122262e")
+		(uuid "8974eaa2-0539-425d-a215-1d777e51cb51")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.9405 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO4"
-		(at 24.13 54.61 0)
+	(global_label "IO16"
+		(shape input)
+		(at 119.38 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "8b31315a-2fcb-4ae7-b56d-df558c77e09b")
+		(uuid "94198e87-7dd9-4500-8b22-d84d33971b4f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO2"
-		(at 24.13 39.37 0)
+	(global_label "IO20"
+		(shape input)
+		(at 208.28 24.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "9265d9c5-7742-43b9-b20c-aa9782c7410d")
+		(uuid "9e546d87-17ce-4e61-b4ca-a869cbd9313a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.9405 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO23"
-		(at 201.93 46.99 0)
+	(global_label "IO6"
+		(shape input)
+		(at 30.48 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "96a43270-ca17-4d75-828c-71333392bc19")
+		(uuid "ab7385f9-7dfd-4f00-bff8-0404d6eedb44")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO13"
-		(at 113.03 46.99 0)
+	(global_label "IO5"
+		(shape input)
+		(at 30.48 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "a770e39f-1b52-49d4-9d23-d78bff35960f")
+		(uuid "b9bfcec8-82d5-4006-9de2-20889385de95")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO11"
-		(at 113.03 31.75 0)
+	(global_label "IO3"
+		(shape input)
+		(at 30.48 46.99 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "b798b742-e50e-4030-9493-0d2df0ded308")
+		(uuid "c5ae8f55-29ed-4f0c-ae8b-80dbb9a1ffc6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO21"
-		(at 201.93 31.75 0)
+	(global_label "IO18"
+		(shape input)
+		(at 119.38 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "b942f780-345e-4fe0-a480-8f94f38c7987")
+		(uuid "d155baa5-4f45-4df9-bbbd-06eba231f32b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO18"
-		(at 113.03 85.09 0)
+	(global_label "IO0"
+		(shape input)
+		(at 30.48 24.13 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "c484b8e9-48c3-45dd-a70a-d2c651878a67")
+		(uuid "d6d8b411-88f8-4ea2-8af1-f88858f41e7b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO20"
-		(at 201.93 24.13 0)
+	(global_label "IO14"
+		(shape input)
+		(at 119.38 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "d6c311b6-a195-48b8-8fa7-1135f0b4c200")
+		(uuid "e1c65f7f-6a50-4b1b-8300-80d41dc57faa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO1"
-		(at 24.13 31.75 0)
+	(global_label "IO12"
+		(shape input)
+		(at 119.38 39.37 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "dddb728f-75b8-4b89-ad34-2e1cb6d5df8d")
+		(uuid "f022fc1d-1100-475d-a767-9d024d756fb8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.0405 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO8"
-		(at 24.13 85.09 0)
+	(global_label "IO25"
+		(shape input)
+		(at 208.28 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "e3551023-d24c-4d38-904f-30dc850efb63")
+		(uuid "f5c12720-3166-4a66-bd3b-fc8f3470cc59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 200.9405 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
-	(label "IO5"
-		(at 24.13 62.23 0)
+	(global_label "IO4"
+		(shape input)
+		(at 30.48 54.61 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right)
 		)
-		(uuid "fc521e66-ed29-48ae-9da3-d6f9d3024df0")
+		(uuid "f77d0802-e16a-4f01-b649-20d33631586f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 24.35 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:LED_Small")
@@ -10007,6 +10169,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 16.51 -16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "521b91b4-6847-47a9-895b-febdf0cbb3a6")
 		)
@@ -10017,71 +10188,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 69.85 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0236ee38-44c8-46d7-b2d9-d6004a958964")
-		(property "Reference" "IO16"
-			(at 105.664 69.85 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 67.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "71dd4165-38c4-41f1-b896-41b8d50ab18b")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO16")
 					(unit 1)
 				)
 			)
@@ -10152,6 +10258,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 213.36 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 170.18 -170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10246,6 +10361,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 99.06 -99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "73c60beb-7ff6-4b5c-82ab-aa3fc4aaeb81")
 		)
@@ -10326,6 +10450,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 124.46 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 96.52 -96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10420,6 +10553,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 88.9 -88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "38afea07-c6a3-4a7e-8012-25c340a428b3")
 		)
@@ -10500,6 +10642,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 133.35 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 82.55 -82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10594,6 +10745,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 97.79 -97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "7a6e8a59-7110-40b4-93ea-cc46fbeef40d")
 		)
@@ -10674,6 +10834,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 160.02 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 78.74 -78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10768,6 +10937,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 204.47 -204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2175a98a-fede-4ba4-9a4b-1b2245490ede")
 		)
@@ -10778,71 +10956,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D137")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 24.13 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "145e847f-38e9-4d23-8128-8ea2893839ab")
-		(property "Reference" "IO0"
-			(at 16.764 24.13 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 21.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "987c9aa4-c15c-47d3-9e33-5935a8f766c6")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO0")
 					(unit 1)
 				)
 			)
@@ -10913,6 +11026,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 186.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 135.89 -135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11007,6 +11129,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 52.07 -52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "38ea1e49-fb39-47b3-bc9c-89fa8f119f18")
 		)
@@ -11087,6 +11218,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 177.8 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 134.62 -134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11181,6 +11321,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 133.35 -133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bbf33a9d-bf63-4907-92c5-b2287ea2a446")
 		)
@@ -11261,6 +11410,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 88.9 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 45.72 -45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11355,6 +11513,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 180.34 -180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0825d9b5-2fa7-49f0-be46-f0d95f975761")
 		)
@@ -11442,6 +11609,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 36.83 -36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8e0042d5-3949-444d-92b9-c4e9998950b6")
 		)
@@ -11452,71 +11628,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D43")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 39.37 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2122c4f6-0ee4-4bed-a3c8-69881cb45936")
-		(property "Reference" "IO12"
-			(at 105.664 39.37 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 36.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bfd5067f-4aa4-4868-b79e-534633633454")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO12")
 					(unit 1)
 				)
 			)
@@ -11587,6 +11698,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 248.92 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 220.98 -220.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11681,6 +11801,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 90.17 -90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "562ccc3e-69a2-4368-812c-32577c3e53d4")
 		)
@@ -11768,6 +11897,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -29.21 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0a1715fd-7b43-40be-8c4f-ef322bd5d677")
 		)
@@ -11778,71 +11916,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 62.23 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "25ce4a82-901d-41c5-9704-f017f72dedc0")
-		(property "Reference" "IO23"
-			(at 194.564 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 197.358 59.69 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 200.66 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0639fce9-b5e2-440d-8726-2361af4c31e5")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO23")
 					(unit 1)
 				)
 			)
@@ -11920,6 +11993,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 123.19 -123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ac6bd8fc-b9a9-4525-8bc9-5070a918ecdb")
 		)
@@ -11930,201 +12012,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D85")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 24.13 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2831908c-d835-49f5-a39f-a43ff61ec19d")
-		(property "Reference" "IO9"
-			(at 194.564 24.13 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 197.358 21.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 200.66 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "52a4f317-991a-4800-9543-d31ad2dc3c30")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 24.13 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2a3480ca-1293-49ef-a01c-0f1d29ec4c2a")
-		(property "Reference" "IO10"
-			(at 105.664 24.13 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 21.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 19.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "38991e51-3cf3-4a89-8e6d-8ceb2065928a")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 85.09 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2d475c32-4e58-4a44-824f-e71265c052db")
-		(property "Reference" "IO18"
-			(at 105.664 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "17e9e3d7-d3f8-42d2-9e1e-66e8fef54caf")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO18")
 					(unit 1)
 				)
 			)
@@ -12195,6 +12082,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 186.69 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 151.13 -151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12289,6 +12185,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 5.08 -5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "23e53fe2-5828-406a-9737-eebd98406b9f")
 		)
@@ -12376,6 +12281,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -19.05 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "10d4898f-1133-4430-8b00-ddc4aec58535")
 		)
@@ -12386,71 +12300,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 85.09 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2f20e51a-537e-4763-93db-ccad1c68041b")
-		(property "Reference" "IO8"
-			(at 16.764 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 82.55 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aaa578b2-d6d4-47cc-93a0-e7a8a0b3d192")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO8")
 					(unit 1)
 				)
 			)
@@ -12521,6 +12370,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 160.02 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 109.22 -109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12615,6 +12473,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 81.28 -81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "af30cad8-b287-4515-b746-870d955fae48")
 		)
@@ -12695,6 +12562,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 62.23 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 34.29 -34.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12789,6 +12665,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 1.27 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0f88b8a3-31e6-454f-91b4-e2f83c70ca19")
 		)
@@ -12869,6 +12754,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 62.23 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -11.43 11.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12963,6 +12857,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 54.61 -54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "da48b4e4-745f-40a5-8f93-8fab8182a3a8")
 		)
@@ -13043,6 +12946,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 133.35 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 74.93 -74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13137,6 +13049,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 93.98 -93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "42557ea5-2407-4fc9-b6d6-b8429e92d13b")
 		)
@@ -13224,6 +13145,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 69.85 -69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2e6ffc85-82ff-4286-bcd2-4e367345f563")
 		)
@@ -13234,71 +13164,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D92")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 62.23 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "40a5dabb-062c-4503-bd0b-d8e710d3e0bf")
-		(property "Reference" "IO5"
-			(at 16.764 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 59.69 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0ffcb767-0555-4606-a95e-67fa334f2235")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO5")
 					(unit 1)
 				)
 			)
@@ -13369,6 +13234,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 160.02 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 86.36 -86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13463,6 +13337,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 284.48 284.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "45fcccc0-2d27-4583-91f2-084d4f823114")
 		)
@@ -13543,6 +13426,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 53.34 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 25.4 -25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13637,6 +13529,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 114.3 -114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "670c87e2-6bf7-4e4e-82be-9766c0727a20")
 		)
@@ -13647,71 +13548,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D77")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 77.47 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4870f33b-1c13-4c02-9793-67e14ff2996e")
-		(property "Reference" "IO7"
-			(at 16.764 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 74.93 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "45e18601-9722-4202-8934-10e16f232364")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO7")
 					(unit 1)
 				)
 			)
@@ -13782,6 +13618,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 240.03 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 189.23 -189.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13876,6 +13721,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -36.83 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "331066b4-c6ca-4f27-87c3-27bb23c397ad")
 		)
@@ -13956,6 +13810,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 222.25 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 163.83 -163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14050,6 +13913,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 142.24 -142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8ebdf1c3-a99a-43f0-bcf8-b21a3a1f712d")
 		)
@@ -14060,71 +13932,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D110")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 39.37 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "59f7d06b-1eea-47e4-b222-94eef1bf21db")
-		(property "Reference" "IO20"
-			(at 194.564 39.37 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 197.358 36.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 200.66 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "37a0e269-0a0e-4bab-a433-0f0bb077301c")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO20")
 					(unit 1)
 				)
 			)
@@ -14195,6 +14002,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 88.9 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 60.96 -60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14289,6 +14105,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 73.66 -73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "077a7709-4fa8-4818-a1ac-d2c71e9d495c")
 		)
@@ -14369,6 +14194,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 35.56 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -22.86 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14463,6 +14297,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -45.72 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1e8caa1e-19ee-450b-ae9d-340f3c22c88a")
 		)
@@ -14543,6 +14386,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 53.34 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -12.7 12.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14637,6 +14489,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 29.21 -29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "f0bfb488-23bf-4503-b6c7-24647b8f5443")
 		)
@@ -14717,6 +14578,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 213.36 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 185.42 -185.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14811,6 +14681,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -5.08 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "352f24fc-45e6-464d-9693-9da49d1e7c2f")
 		)
@@ -14891,6 +14770,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 35.56 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14985,6 +14873,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 187.96 -187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "54d569d0-ddf4-4e48-b91b-0228f6c248ed")
 		)
@@ -15065,6 +14962,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 142.24 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 106.68 -106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15159,6 +15065,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 44.45 -44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a89ad992-c24c-40d7-9570-7f6c1e2be386")
 		)
@@ -15239,6 +15154,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 44.45 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 8.89 -8.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15333,6 +15257,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 115.57 -115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "dc4eb510-696e-4b66-9a72-4d4d7783a410")
 		)
@@ -15413,6 +15346,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 71.12 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 20.32 -20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15507,6 +15449,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 132.08 -132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "98474d63-9838-4df2-a854-1870bd41af0b")
 		)
@@ -15517,71 +15468,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D93")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 54.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "71c20ed3-4361-4733-b244-526115137546")
-		(property "Reference" "IO14"
-			(at 105.664 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a3800f3a-f251-4a1b-9c2c-5f982d7522d6")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO14")
 					(unit 1)
 				)
 			)
@@ -15652,6 +15538,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 133.35 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 59.69 -59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15746,6 +15641,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 111.76 -111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2c6d13b9-3389-4784-97e2-6fb625031620")
 		)
@@ -15826,6 +15730,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 80.01 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 52.07 -52.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15920,6 +15833,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 105.41 -105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "4cd248c1-da11-4c05-9272-159c7d09f9cf")
 		)
@@ -16007,6 +15929,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 104.14 -104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cf91304d-e15a-4be8-af88-1deacb29d043")
 		)
@@ -16017,71 +15948,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D115")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 31.75 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "76cbc573-2de1-44d3-8d71-82273d791bb2")
-		(property "Reference" "IO1"
-			(at 16.764 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 29.21 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d192bbd0-bcd3-4441-b4b3-31275fbba81b")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO1")
 					(unit 1)
 				)
 			)
@@ -16152,6 +16018,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 44.45 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -21.59 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16246,6 +16121,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -1.27 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "76bf7ef4-8a4a-4d9c-b4f8-3af39daa4f34")
 		)
@@ -16256,71 +16140,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D48")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 77.47 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7bb213c2-657a-4ea4-8631-911602c9936e")
-		(property "Reference" "IO17"
-			(at 105.664 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 74.93 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6736b0c0-8f36-40ab-9c0b-ed7216124fad")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO17")
 					(unit 1)
 				)
 			)
@@ -16391,6 +16210,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 160.02 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 101.6 -101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16485,6 +16313,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 67.31 -67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e1a387fc-b61d-4b18-80b7-f1e954d818f7")
 		)
@@ -16565,6 +16402,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 62.23 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 3.81 -3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16659,6 +16505,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -27.94 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "aeaa4f64-5fd5-4b68-bf13-60124f88f16a")
 		)
@@ -16739,6 +16594,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 62.23 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -3.81 3.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16833,6 +16697,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -30.48 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b7cc8fa7-c257-49f5-942f-1c79a8228163")
 		)
@@ -16843,71 +16716,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 46.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8275fb19-75e5-4640-9932-5588f0f91480")
-		(property "Reference" "IO21"
-			(at 194.564 46.99 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 197.358 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 200.66 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f67e58fd-218c-4470-81e4-b57f9850d01a")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO21")
 					(unit 1)
 				)
 			)
@@ -16985,6 +16793,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 162.56 -162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ca924f3c-3b88-44c2-ab91-713e1bf6a756")
 		)
@@ -16995,71 +16812,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D124")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 31.75 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "849e286e-aa2b-4531-902a-138beba07003")
-		(property "Reference" "IO11"
-			(at 105.664 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 29.21 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "29fdefdd-28cb-4f97-9cb0-76e0665d39df")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO11")
 					(unit 1)
 				)
 			)
@@ -17130,6 +16882,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 177.8 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 96.52 -96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17224,6 +16985,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 2.54 -2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cc718bad-4c00-489d-be19-1a79874b8508")
 		)
@@ -17304,6 +17074,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 80.01 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 6.35 -6.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17398,6 +17177,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 66.04 -66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fc4ff551-8f3a-4855-aa12-9e72d33f63fb")
 		)
@@ -17478,6 +17266,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 124.46 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 58.42 -58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17572,6 +17369,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 43.18 -43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "716fe2b7-7fb4-428b-abed-bf6ea1cf7e89")
 		)
@@ -17652,6 +17458,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 160.02 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 124.46 -124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17746,6 +17561,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 53.34 -53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "cd5713ba-0c30-49e5-87ce-99d3b967c0f2")
 		)
@@ -17826,6 +17650,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 88.9 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 22.86 -22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17920,6 +17753,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 83.82 -83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "01dc1727-aad9-4b38-8cff-8b651360e9b6")
 		)
@@ -18000,6 +17842,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 151.13 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 100.33 -100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18094,6 +17945,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 62.23 -62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d052c8d9-554b-4910-9f60-713f5e983cb2")
 		)
@@ -18174,6 +18034,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 222.25 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 186.69 -186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18268,6 +18137,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 212.09 -212.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e7838aa8-2ebf-44f7-9c59-b4ed0ead106b")
 		)
@@ -18348,6 +18226,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 177.8 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 127 -127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18442,6 +18329,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -6.35 6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9fcc6cb4-0231-4e14-8f71-cdd55f47cdb5")
 		)
@@ -18529,6 +18425,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 77.47 -77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b965a3e5-a5c7-4ff5-8012-9615b6623aec")
 		)
@@ -18539,71 +18444,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D91")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 69.85 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9fe1bbf8-b0fb-4cff-9bd8-ce35707cbda6")
-		(property "Reference" "IO6"
-			(at 16.764 69.85 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 67.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d03886db-b671-4f33-ab40-a6056db37d40")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO6")
 					(unit 1)
 				)
 			)
@@ -18674,6 +18514,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 71.12 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -2.54 2.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18768,6 +18617,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 195.58 -195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3837b53b-1ae7-4248-beff-8fe327a5c3d5")
 		)
@@ -18848,6 +18706,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 53.34 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 10.16 -10.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18942,6 +18809,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -7.62 7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d0ef42eb-7f40-4e69-8d24-eb01246ce9c6")
 		)
@@ -19022,6 +18898,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 168.91 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 118.11 -118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19116,6 +19001,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 203.2 -203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3cf35365-8b8b-4251-bd0f-4d3145c507c6")
 		)
@@ -19203,6 +19097,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 95.25 -95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "27f0a721-9423-4db8-8438-17df08bd92f7")
 		)
@@ -19213,71 +19116,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D107")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 54.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aaf76b39-550d-4ed2-81e0-721829f34674")
-		(property "Reference" "IO4"
-			(at 16.764 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "01cac334-6340-493d-bea7-557834f6d833")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO4")
 					(unit 1)
 				)
 			)
@@ -19348,6 +19186,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 240.03 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 181.61 -181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19442,6 +19289,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 140.97 -140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5879ea47-ce62-4675-ac71-da37165e6405")
 		)
@@ -19522,6 +19378,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 248.92 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 299.72 299.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19616,6 +19481,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 11.43 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "20092698-b933-42eb-b600-04904eb932a7")
 		)
@@ -19696,6 +19570,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 142.24 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 68.58 -68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19790,6 +19673,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 30.48 -30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "98565a9e-3cdc-4a74-978a-6462e676c18f")
 		)
@@ -19870,6 +19762,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 53.34 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 17.78 -17.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19964,6 +19865,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 13.97 -13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "6c2aa42d-a7fe-487c-b04e-7c3e89c4c6cd")
 		)
@@ -20051,6 +19961,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 12.7 -12.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "69d698e0-4b6d-4969-83fc-ddb70e4621d9")
 		)
@@ -20061,71 +19980,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 31.75 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b45ef4e2-251a-4b87-99e9-7dc0b287f8ef")
-		(property "Reference" "IO19"
-			(at 194.564 31.75 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 197.358 29.21 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 200.66 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b977f7f3-9277-402c-be4f-73167a9f9fa2")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO19")
 					(unit 1)
 				)
 			)
@@ -20196,6 +20050,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 240.03 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 196.85 -196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20290,6 +20153,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 21.59 -21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8e36dd37-36ed-4889-b0ef-864ec5142e3a")
 		)
@@ -20370,6 +20242,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 142.24 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 76.2 -76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20464,6 +20345,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 35.56 -35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8595e5bd-526a-4b9b-bb24-a916ea8b14be")
 		)
@@ -20474,71 +20364,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 46.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bb18519f-b52d-4c97-a79f-980478079581")
-		(property "Reference" "IO3"
-			(at 16.764 46.99 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d0457077-a231-4c3a-8551-3a3b21cf22e5")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO3")
 					(unit 1)
 				)
 			)
@@ -20609,6 +20434,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 177.8 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 149.86 -149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20703,6 +20537,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 46.99 -46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8eace194-a7d0-4feb-a206-a47ca786775d")
 		)
@@ -20783,6 +20626,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 168.91 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 125.73 -125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20877,6 +20729,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 177.8 -177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "75ae06df-ecbb-4e50-bce0-73ca03e7a9aa")
 		)
@@ -20957,6 +20818,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 62.23 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 26.67 -26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21051,6 +20921,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 102.87 -102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a599faab-f8be-4653-aab4-ee11a06e3010")
 		)
@@ -21131,6 +21010,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 168.91 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 87.63 -87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21225,6 +21113,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 171.45 -171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2f49236a-868a-4250-962e-541c6d013251")
 		)
@@ -21305,6 +21202,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 248.92 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 205.74 -205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21399,6 +21305,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -13.97 13.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1423c094-3670-40f4-bcba-2a8ec747082e")
 		)
@@ -21479,6 +21394,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 231.14 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 172.72 -172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21573,6 +21497,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 107.95 -107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "67328afc-b889-4d12-9835-37591674a45a")
 		)
@@ -21653,6 +21586,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 124.46 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 50.8 -50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21747,6 +21689,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 85.09 -85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b8bb0cb4-721d-4faa-92be-ddac596a9ba1")
 		)
@@ -21827,6 +21778,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 53.34 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -20.32 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21921,6 +21881,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 60.96 -60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "df3bb77a-2636-4da1-92ec-436540107ba0")
 		)
@@ -22001,6 +21970,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 35.56 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 7.62 -7.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22095,6 +22073,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 158.75 -158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "49fc610a-4ae8-4814-af84-740e57c376db")
 		)
@@ -22175,6 +22162,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 35.56 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -15.24 15.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22269,6 +22265,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 7.62 -7.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e31d1d6d-bbb7-489b-9a3a-421ac015d412")
 		)
@@ -22279,71 +22284,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D56")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 62.23 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e2a79792-833f-420c-af0c-3377f8f440bc")
-		(property "Reference" "IO15"
-			(at 105.664 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 59.69 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8463d200-91aa-4d23-b16e-51304b764ecd")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO15")
 					(unit 1)
 				)
 			)
@@ -22421,6 +22361,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 110.49 -110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "180d266c-55fe-4ac1-901a-79d214033e94")
 		)
@@ -22431,71 +22380,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D105")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 22.86 39.37 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e55c1563-0514-499c-bd50-3c9e1935d242")
-		(property "Reference" "IO2"
-			(at 16.764 39.37 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 19.558 36.83 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 22.86 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 22.86 34.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 22.86 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aca8bf09-910f-48a1-ba0b-7ce338874590")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO2")
 					(unit 1)
 				)
 			)
@@ -22566,6 +22450,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 177.8 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 119.38 -119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22660,6 +22553,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 38.1 -38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "824328e0-abc9-4801-819f-66a8d33100b9")
 		)
@@ -22740,6 +22642,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 142.24 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 91.44 -91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22834,6 +22745,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 15.24 -15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1ed0712f-f031-44a8-9649-fa246d601ef0")
 		)
@@ -22914,6 +22834,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 222.25 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 194.31 -194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23008,6 +22937,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 116.84 -116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "2bf03440-9015-476c-a974-f4173575ea90")
 		)
@@ -23095,6 +23033,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 179.07 -179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e7f21c72-5c2c-47ef-b710-fe4dd8500f77")
 		)
@@ -23105,71 +23052,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D128")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 111.76 46.99 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ef910c0e-3b83-4422-98ba-2002ff18033a")
-		(property "Reference" "IO13"
-			(at 105.664 46.99 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 108.458 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 111.76 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 111.76 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ef6c37bb-c9c4-4fdc-8f8c-d986fca87e8a")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO13")
 					(unit 1)
 				)
 			)
@@ -23240,6 +23122,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 213.36 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 154.94 -154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23334,6 +23225,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 19.05 -19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "0e0bcb34-f382-4561-a405-47a167cde2cc")
 		)
@@ -23414,6 +23314,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 35.56 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at -38.1 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23508,6 +23417,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 43.18 -43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1240b928-c6ca-48a0-965d-3959dd23e200")
 		)
@@ -23518,71 +23436,6 @@
 			(project "twistedCharlieplex"
 				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
 					(reference "D33")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 200.66 54.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f6a8a0dd-5ea6-4029-a6d4-13b6c9badd3a")
-		(property "Reference" "IO22"
-			(at 194.564 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 197.358 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 200.66 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 200.66 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 200.66 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b72b5dc4-a6a7-4c4a-818a-0a55c69a80c1")
-		)
-		(instances
-			(project "twistedCharlieplex"
-				(path "/dfe6bfb6-e64e-4485-b00f-025a7388c736/7f178c3c-d6b1-431b-88ce-7562c7a8be46"
-					(reference "IO22")
 					(unit 1)
 				)
 			)
@@ -23653,6 +23506,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 186.69 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 143.51 -143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23747,6 +23609,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at -10.16 10.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8f634cdf-6d3e-4e9c-9b21-436510368b7d")
 		)
@@ -23827,6 +23698,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 97.79 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 69.85 -69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23921,6 +23801,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C74339"
+			(at 27.94 -27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3380480b-d49b-4cd6-bedd-daefad1b6e24")
 		)
@@ -24001,6 +23890,15 @@
 		)
 		(property "Sim.Pins" "1=A 2=K"
 			(at 151.13 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C74339"
+			(at 92.71 -92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
