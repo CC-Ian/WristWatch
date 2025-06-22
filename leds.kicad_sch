@@ -1160,8 +1160,8 @@
 		(uuid "febff73e-8286-45b4-a9eb-fd535dde1544")
 	)
 	(no_connect
-		(at 261.62 129.54)
-		(uuid "dce7fe15-7673-4b21-950f-30d5b096ae35")
+		(at 261.62 68.58)
+		(uuid "547d206c-54e6-4c82-8463-f4d3adf54282")
 	)
 	(wire
 		(pts
@@ -1775,7 +1775,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 68.58) (xy 33.02 68.58)
+			(xy 262.89 129.54) (xy 261.62 129.54)
 		)
 		(stroke
 			(width 0)
@@ -1905,16 +1905,6 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 99.06) (xy 33.02 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9410ba47-8ad7-44e0-bc07-30de292e15c6")
-	)
-	(wire
-		(pts
 			(xy 139.7 27.94) (xy 147.32 27.94)
 		)
 		(stroke
@@ -1992,6 +1982,16 @@
 			(type default)
 		)
 		(uuid "9f4bae30-fdd2-4593-ba40-832665f35d25")
+	)
+	(wire
+		(pts
+			(xy 33.02 68.58) (xy 31.75 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1dfbbbe-f83d-499e-a648-53ff21652dc9")
 	)
 	(wire
 		(pts
@@ -2215,7 +2215,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 35.56) (xy 262.89 35.56)
+			(xy 33.02 35.56) (xy 31.75 35.56)
 		)
 		(stroke
 			(width 0)
@@ -2315,7 +2315,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 68.58) (xy 262.89 68.58)
+			(xy 261.62 35.56) (xy 262.89 35.56)
 		)
 		(stroke
 			(width 0)
@@ -2385,7 +2385,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 35.56) (xy 33.02 35.56)
+			(xy 31.75 99.06) (xy 33.02 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2435,7 +2435,7 @@
 	)
 	(global_label "Bank2"
 		(shape input)
-		(at 262.89 68.58 0)
+		(at 262.89 35.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2445,7 +2445,7 @@
 		)
 		(uuid "0ff2460c-a5c7-4e27-9173-0614b393b82c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.6808 68.58 0)
+			(at 271.6808 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2477,9 +2477,9 @@
 			)
 		)
 	)
-	(global_label "LED_IN"
+	(global_label "LED_DATA"
 		(shape input)
-		(at 31.75 35.56 180)
+		(at 31.75 99.06 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2489,7 +2489,7 @@
 		)
 		(uuid "5bc00fb5-5024-479e-a265-7815c7f174fc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.4148 35.56 0)
+			(at 19.9353 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2501,44 +2501,22 @@
 	)
 	(global_label "Bank1"
 		(shape input)
-		(at 31.75 68.58 180)
+		(at 262.89 129.54 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "84906f01-557d-497d-82be-b35ef57d94cc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.9592 68.58 0)
+			(at 271.6808 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Bank2"
-		(shape input)
-		(at 31.75 99.06 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8c2a8934-c332-4ba5-b377-874bbae74ec0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.9592 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -2565,24 +2543,46 @@
 			)
 		)
 	)
-	(global_label "Bank1"
+	(global_label "Bank2"
 		(shape input)
-		(at 262.89 35.56 0)
+		(at 31.75 68.58 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "fd5d6b3a-910e-458b-90e0-58845cc727f6")
+		(uuid "ed781882-1522-4b0d-bc3a-2a3459497fed")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 271.6808 35.56 0)
+			(at 22.9592 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Bank1"
+		(shape input)
+		(at 31.75 35.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fd5d6b3a-910e-458b-90e0-58845cc727f6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 22.9592 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
