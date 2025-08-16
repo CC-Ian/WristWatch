@@ -3,4 +3,5 @@
   (lib (name "LED_Custom")(type "KiCad")(uri "${KIPRJMOD}/LED_Custom.pretty")(options "")(descr ""))
   (lib (name "esp8285")(type "KiCad")(uri "${KIPRJMOD}/esp8285")(options "")(descr ""))
   (lib (name "Antenna_SMD")(type "KiCad")(uri "${KIPRJMOD}/Antenna_SMD.pretty")(options "")(descr ""))
+  (lib (name "wch-antenna")(type "KiCad")(uri "/home/ian/Documents/projects/general-resources/wch-kicad-lbr/footprints/wch-antenna.pretty")(options "")(descr ""))
 )
