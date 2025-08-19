@@ -3,6 +3,7 @@
 // #include <esp_sleep.h>
 // #include <esp_system.h>
 // #include <esp_sntp.h>
+#include <soc/rtc.h>
 #include "esp_sleep.h"
 #include <esp_wifi.h>
 #include "esp_private/esp_clk.h"
@@ -240,14 +241,50 @@ void SetTimeTask(void *pvParameters) {
   vTaskDelete(NULL);
 }
 
+
+#define CALIBRATE_ONE(cali_clk) calibrate_one(cali_clk, #cali_clk)
+
+static uint32_t calibrate_one(rtc_cal_sel_t cal_clk, const char *name)
+{
+
+    const uint32_t cal_count = 1000;
+    const float factor = (1 << 19) * 1000.0f;
+    uint32_t cali_val;
+    printf("%s:\n", name);
+    for (int i = 0; i < 5; ++i)
+    {
+        printf("calibrate (%d): ", i);
+        cali_val = rtc_clk_cal(cal_clk, cal_count);
+        printf("%.3f kHz\n", factor / (float)cali_val);
+    }
+    return cali_val;
+}
+
 /// @brief Setup function for the ESP32-C3 wristwatch.
 /// This function initializes the LED strip, IMU, and schedules the next wakeup.
 /// It also creates tasks for setting the time and showing the current time.
 /// It checks if the RTC has been initialized and sets the time if it hasn't.
 /// If the device is woken up by the IMU, it shows the current time.
 /// Finally, it goes to deep sleep until the next scheduled wakeup.
-void setup() {  
+void setup() { 
+  rtc_clk_32k_bootstrap(512);
+  rtc_clk_32k_bootstrap(512);
+  rtc_clk_32k_enable(true);
+
+  uint32_t cal_32k = CALIBRATE_ONE(RTC_CAL_32K_XTAL);
+  rtc_clk_slow_freq_set(RTC_SLOW_FREQ_32K_XTAL);
+
   Serial.begin(115200);
+
+  if (cal_32k == 0) {
+      printf("32K XTAL OSC has not started up");
+  } else {
+      printf("done\n");
+  }
+
+  if (rtc_clk_32k_enabled()) {
+      Serial.println("OSC Enabled");
+  }
   
   // If firstboot:
   if (!isRtcInitialized || esp_sleep_get_wakeup_cause() == ESP_SLEEP_WAKEUP_TIMER) {
@@ -259,7 +296,7 @@ void setup() {
     Serial.println("Woke up from GPIO interrupt. Showing time...");
     xTaskCreate(ShowTimeTask, "Show Time Task", 2048, NULL, 1, NULL);
   }
-
+  
   // Initialize the IMU for wakeup.
   initializeIMU();
 
