@@ -1,0 +1,5 @@
+.pio
+.vscode/
+*.old
+dependencies.lock
+managed_components/

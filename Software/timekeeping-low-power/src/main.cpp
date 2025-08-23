@@ -157,7 +157,7 @@ void ShowTimeTask(void *pvParameters) {
 
   unsigned long startTime = millis();
 
-  while (startTime + 5000 > millis()) { // Run for 5 seconds
+  while (startTime + 15000 > millis()) { // Run for 5 seconds
     // Base the time on epoch. This allows DST To work automatically.
     time_t now;
     struct tm timeinfo;
@@ -244,20 +244,17 @@ void SetTimeTask(void *pvParameters) {
 
 #define CALIBRATE_ONE(cali_clk) calibrate_one(cali_clk, #cali_clk)
 
-static uint32_t calibrate_one(rtc_cal_sel_t cal_clk, const char *name)
-{
-
-    const uint32_t cal_count = 1000;
-    const float factor = (1 << 19) * 1000.0f;
-    uint32_t cali_val;
-    printf("%s:\n", name);
-    for (int i = 0; i < 5; ++i)
-    {
-        printf("calibrate (%d): ", i);
-        cali_val = rtc_clk_cal(cal_clk, cal_count);
-        printf("%.3f kHz\n", factor / (float)cali_val);
-    }
-    return cali_val;
+static uint32_t calibrate_one(rtc_cal_sel_t cal_clk, const char *name){
+  const uint32_t cal_count = 1000;
+  const float factor = (1 << 19) * 1000.0f;
+  uint32_t cali_val;
+  printf("%s:\n", name);
+  for (int i = 0; i < 5; ++i) {
+    printf("calibrate (%d): ", i);
+    cali_val = rtc_clk_cal(cal_clk, cal_count);
+    printf("%.3f kHz\n", factor / (float)cali_val);
+  }
+  return cali_val;
 }
 
 /// @brief Setup function for the ESP32-C3 wristwatch.
@@ -277,9 +274,9 @@ void setup() {
   Serial.begin(115200);
 
   if (cal_32k == 0) {
-      printf("32K XTAL OSC has not started up");
+    printf("32K XTAL OSC has not started up");
   } else {
-      printf("done\n");
+    printf("done\n");
   }
 
   if (rtc_clk_32k_enabled()) {
