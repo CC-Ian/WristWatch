@@ -183,17 +183,20 @@ static void imu_init(void) {
     ESP_ERROR_CHECK(i2c_param_config(I2C_MASTER_NUM, &conf));
     ESP_ERROR_CHECK(i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0));
 
-    // Ctrl1: 1.6Hz, Low Power
-    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL1, 0x10));
+    // Ctrl1: 12.5Hz, Low Power Mode, LP Mode 1 (~1uA @1v8)
+    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL1, 0x20));
+
+    // Ctrl6: High Pass enabled? +-4g FS
+    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL6, 0b00011000)); // High-pass filter disabled
 
     // Ctrl7: Enable interrupts
     ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL7, 0x20));
 
-    // Wakeup duration = 0 (1 sample above threshold)
-    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_WAKE_UP_DUR, 0x01));
+    // Wakeup duration 2? samples above threshold. Really odd bits.
+    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_WAKE_UP_DUR, 0b01100000));
 
-    // Wakeup threshold = 0x0F (higher = less sensitive)
-    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_WAKE_UP_THS, 0x08));
+    // Wakeup threshold in gs LSB = 1/64 FS. FS is 4G. This is set as 0.75g.
+    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_WAKE_UP_THS, 0b00001100));
 
     // Interrupt1 pulse wakeup signal
     ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL4_INT1_PAD_CTRL, 0x20));
@@ -203,7 +206,7 @@ static void imu_init(void) {
 
 /// @brief Set LED enable pin
 /// @param state On|Off state True|False
-static void set_leds(bool state)
+static void enable_leds(bool state)
 {
     gpio_set_level(LED_EN_PIN, !state); // active low
 }
@@ -218,7 +221,7 @@ static void clear_strip(void)
 static void display_time(void)
 {
     init_led_strip();
-    set_leds(true);
+    enable_leds(true);
     clear_strip();
 
     int64_t start_time = esp_timer_get_time() / 1000; // ms
@@ -274,7 +277,7 @@ static void display_time(void)
     }
 
     clear_strip();
-    set_leds(false);
+    enable_leds(false);
     ESP_LOGI(TAG, "LEDs off after 10s");
 }
 
@@ -328,7 +331,14 @@ void app_main(void)
         wifi_init_sta();
         sntp_set_time_sync_notification_cb(time_sync_notification_cb);
 
+        int64_t wifi_start_time = esp_timer_get_time() / 1000; // ms
+        const int64_t wifi_timeout_ms = 60000; // 1 minutes
         while (!time_synced) {
+            if ((esp_timer_get_time() / 1000) - wifi_start_time > wifi_timeout_ms) {
+                ESP_LOGW(TAG, "WiFi/SNTP sync timeout. Returning to sleep.");
+                enter_deep_sleep();
+                return;
+            }
             vTaskDelay(pdMS_TO_TICKS(500));
         }
     }
@@ -341,7 +351,14 @@ void app_main(void)
         wifi_init_sta();
         sntp_set_time_sync_notification_cb(time_sync_notification_cb);
 
+        int64_t wifi_start_time = esp_timer_get_time() / 1000; // ms
+        const int64_t wifi_timeout_ms = 120000; // 2 minutes
         while (!time_synced) {
+            if ((esp_timer_get_time() / 1000) - wifi_start_time > wifi_timeout_ms) {
+                ESP_LOGW(TAG, "WiFi/SNTP sync timeout. Returning to sleep.");
+                enter_deep_sleep();
+                return;
+            }
             vTaskDelay(pdMS_TO_TICKS(500));
         }
     }
