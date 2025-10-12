@@ -1,0 +1,9 @@
+Manufacturer=Nexperia
+PartNumber=74HC595BZX
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=17
+Version=7.7
+Released=2021-12-06 10:21:42
+Downloaded=2025-09-28 23:25:55
+3D=Y

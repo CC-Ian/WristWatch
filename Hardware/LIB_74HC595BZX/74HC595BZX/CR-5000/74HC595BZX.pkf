@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "74HC595BZX"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "74HC595BZX")
+        (spec "default")
+    )
+)

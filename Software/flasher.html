@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Sync Flash</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas" width="300" height="300"></canvas>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  const radius = canvas.width / 2;
+
+  // Generate a bitstream from current Unix timestamp
+  const time = Math.floor(Date.now() / 1000); // 32-bit Unix time
+  const bits = time.toString(2).padStart(32, '0'); // Pad to 32 bits
+
+  let i = 0;
+  const bitDuration = 200; // ms per bit (adjust as needed)
+
+  function drawHalfCircle(bit) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Left color is 1 => white, 0 => black
+    const leftColor = bit === '1' ? 'white' : 'black';
+    const rightColor = bit === '1' ? 'black' : 'white';
+
+    // Draw left half
+    ctx.beginPath();
+    ctx.arc(radius, radius, radius, 0.5 * Math.PI, 1.5 * Math.PI, true);
+    ctx.lineTo(radius, 0);
+    ctx.closePath();
+    ctx.fillStyle = leftColor;
+    ctx.fill();
+
+    // Draw right half
+    ctx.beginPath();
+    ctx.arc(radius, radius, radius, 1.5 * Math.PI, 0.5 * Math.PI, true);
+    ctx.lineTo(radius, canvas.height);
+    ctx.closePath();
+    ctx.fillStyle = rightColor;
+    ctx.fill();
+    console.log(Date.now());
+  }
+
+  function nextBit() {
+    if (i < bits.length) {
+      drawHalfCircle(bits[i]);
+      i++;
+    } else {
+      clearInterval(timer);
+      // Reset to black
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+  }
+
+  // Start flashing
+  drawHalfCircle('0'); // initial state
+  const timer = setInterval(nextBit, bitDuration);
+</script>
+</body>
+</html>

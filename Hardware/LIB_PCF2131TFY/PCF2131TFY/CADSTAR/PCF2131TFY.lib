@@ -1,0 +1,16 @@
+.PCF2131TFY :1 ;Real Time Clock Accurate RTC with integrated quartz crystal for industrial applications
+SON50P350X450X150-17N-D
+*STM IC
+*NGS
+*PLB 1="IFS" 2="SCL" 3="SDI" 4="SDO" 5="SDA/'CE'" 6="CLKOUT" 7="VSS" 8="'TS1'" 9="'TS2'" 10="'TS3'" 11="'TS4'" 12="'INTB'" 13="'INTA'" 14="BBS" 15="VDD" 16="VBAT" 17="EP"
+*MXP 17
+*DFN PCF2131TFY
+~!Mouser Part Number (771-PCF2131TFY)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/NXP-Semiconductors/PCF2131TFY?qs=QNEnbhJQKvbnVL67jlWDOg%3D%3D)
+~!Manufacturer_Name (NXP)
+~!Manufacturer_Part_Number (PCF2131TFY)
+~!Link Datasheet (https://www.nxp.com/docs/en/data-sheet/PCF2131DS.pdf)
+~!Height (1.5mm)
+~!3D_Model (PCF2131TFY)
+PCF2131TFY
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 17.1!U 16.1!U 15.1!U 14.1!U 13.1!U 12.1!U 11.1!U 10.1!U 9.1!U 

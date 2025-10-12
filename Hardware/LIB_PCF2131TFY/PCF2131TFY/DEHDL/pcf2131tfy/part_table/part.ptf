@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'PCF2131TFY'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "NXP", "PCF2131TFY" (!) = "", "SON50P350X450X150-17N-D", "Small Outline No-lead", "771-PCF2131TFY", "https://www.mouser.co.uk/ProductDetail/NXP-Semiconductors/PCF2131TFY?qs=QNEnbhJQKvbnVL67jlWDOg%3D%3D", "Real Time Clock Accurate RTC with integrated quartz crystal for industrial applications", "https://www.nxp.com/docs/en/data-sheet/PCF2131DS.pdf", "1.5 mm"
+END_PART
+
+END.

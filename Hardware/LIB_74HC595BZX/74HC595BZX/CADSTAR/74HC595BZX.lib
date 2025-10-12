@@ -1,0 +1,18 @@
+.74HC595BZX :1 ;74HC595; 74HCT595 - 8-bit serial-in, serial or parallel-out shift register with output latches;\n         3-state@en-us
+"74HC595BZX"
+*STM IC
+*NGS
+*PLB 1="Q1" 2="Q2" 3="Q3" 4="Q4" 5="Q5" 6="Q6" 7="Q7" 8="GND_1" 9="Q7S" 10="'MR'" 11="SHCP" 12="STCP" 13="'OE'" 14="DS" 15="Q0" 16="VCC" 17="GND_2"
+*MXP 17
+*DFN 74HC595BZX
+~!Manufacturer_Name (Nexperia)
+~!Manufacturer_Part_Number (74HC595BZX)
+~!Mouser Part Number (771-74HC595BZX)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Nexperia/74HC595BZX?qs=ljCeji4nMDlf8kJc%252BqgNqw%3D%3D)
+~!Arrow Part Number (-)
+~!Arrow Price/Stock (-)
+~!Link Datasheet (https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf)
+~!Height (0.48mm)
+~!3D_Model (74HC595BZX)
+"74HC595BZX"
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 11.1!U 12.1!U 13.1!U 14.1!U 15.1!U 16.1!U 17.1!U 

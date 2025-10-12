@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '74HC595BZX'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Nexperia", "74HC595BZX" (!) = "", "74HC595BZX", "Other", "771-74HC595BZX", "https://www.mouser.co.uk/ProductDetail/Nexperia/74HC595BZX?qs=ljCeji4nMDlf8kJc%252BqgNqw%3D%3D", "", "", "74HC595; 74HCT595 - 8-bit serial-in, serial or parallel-out shift register with output latches;\n         3-state@en-us", "https://assets.nexperia.com/documents/data-sheet/74HC_HCT595.pdf", "0.48 mm"
+END_PART
+
+END.
