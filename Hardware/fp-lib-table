@@ -1,4 +1,6 @@
 (fp_lib_table
   (version 7)
-  (lib (name "KiCad")(type "KiCad")(uri "${KIPRJMOD}/LIB_74HC595BZX/74HC595BZX/KiCad")(options "")(descr ""))
+  (lib (name "Shift_Register")(type "KiCad")(uri "${KIPRJMOD}/LIB_74HC595BZX/74HC595BZX/KiCad")(options "")(descr ""))
+  (lib (name "LED_Custom")(type "KiCad")(uri "${KIPRJMOD}/LED_Custom.pretty")(options "")(descr ""))
+  (lib (name "RTC")(type "KiCad")(uri "${KIPRJMOD}/LIB_PCF2131TFY/PCF2131TFY/KiCad")(options "")(descr ""))
 )

@@ -5,6 +5,146 @@
 	(uuid "9bfd9568-3f0f-482a-abbd-d64861e3a0dc")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Device:C_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "MCU_ST_STM32L4:STM32L412KBUx"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1102,6 +1242,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 24.13) (xy 106.68 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b621c40-9c10-42b1-893c-12e4c71213de")
+	)
+	(wire
+		(pts
 			(xy 92.71 93.98) (xy 92.71 95.25)
 		)
 		(stroke
@@ -1109,6 +1259,16 @@
 			(type default)
 		)
 		(uuid "859d02e8-df77-4335-8608-0f293afb0153")
+	)
+	(wire
+		(pts
+			(xy 129.54 24.13) (xy 129.54 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "895bb4cf-86cc-4fa7-89e1-b0b914bb42fb")
 	)
 	(wire
 		(pts
@@ -1142,6 +1302,26 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 24.13) (xy 118.11 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e306eb63-0dc2-48e8-8ab2-4bb760f1efc2")
+	)
+	(wire
+		(pts
+			(xy 129.54 30.48) (xy 129.54 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f115daf9-a86e-480c-9252-cf30ffebc116")
+	)
+	(wire
+		(pts
 			(xy 78.74 78.74) (xy 80.01 78.74)
 		)
 		(stroke
@@ -1159,6 +1339,26 @@
 			(type default)
 		)
 		(uuid "f355d722-7396-4da4-a140-e64ecc5b1924")
+	)
+	(wire
+		(pts
+			(xy 106.68 30.48) (xy 106.68 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcde12a6-7ef2-469e-ab3e-191e2fee900a")
+	)
+	(wire
+		(pts
+			(xy 118.11 30.48) (xy 118.11 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd5b1ca3-d457-412e-bc80-352d993cb710")
 	)
 	(hierarchical_label "SDA"
 		(shape bidirectional)
@@ -1183,6 +1383,143 @@
 		(uuid "a9f1dbbd-3a45-4a11-98aa-544cfc1ad9cb")
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 118.11 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "09a1f3fe-0f1f-45a9-b16a-dfd631c9da0b")
+		(property "Reference" "C5"
+			(at 120.65 26.6762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 120.65 29.2162 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_Custom:SMD_0402-2"
+			(at 118.11 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 118.11 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 118.11 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "92f8ac20-cbd1-45ae-9337-5891c637203b")
+		)
+		(pin "1"
+			(uuid "170fec0c-95b5-4085-959b-067f53f16049")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V0")
+		(at 106.68 24.13 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10cda84b-5fb2-4fa5-937c-85d4f5002904")
+		(property "Reference" "#PWR046"
+			(at 106.68 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V0"
+			(at 106.68 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 106.68 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4e56deec-c32c-4368-a310-498e8121e10a")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "#PWR046")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "MCU_ST_STM32L4:STM32L412KBUx")
 		(at 92.71 68.58 0)
 		(unit 1)
@@ -1192,7 +1529,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ace394f-7ced-412a-b337-6a70f8850f51")
-		(property "Reference" "U2"
+		(property "Reference" "U100"
 			(at 94.8533 93.98 0)
 			(effects
 				(font
@@ -1340,7 +1677,280 @@
 		(instances
 			(project ""
 				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
-					(reference "U2")
+					(reference "U100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1bcd587b-6303-41ed-9a88-d9d5e9bd300b")
+		(property "Reference" "#PWR047"
+			(at 106.68 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 106.68 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f02cedee-6290-4332-98de-a5373d523a7a")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V0")
+		(at 129.54 24.13 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1daff37a-b273-4d5d-8be5-c403c3d9222b")
+		(property "Reference" "#PWR050"
+			(at 129.54 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V0"
+			(at 129.54 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 129.54 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82772744-7bfd-419f-b532-fcf2903ef7ee")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "#PWR050")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 129.54 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e7edfff-e0ae-4f70-85b7-79c198760a59")
+		(property "Reference" "C6"
+			(at 132.08 26.6762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 132.08 29.2162 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_Custom:SMD_0402-2"
+			(at 129.54 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 129.54 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c83d6912-4ce8-4d1c-a986-9218e0e41238")
+		)
+		(pin "1"
+			(uuid "ef55737f-a0b7-45d5-9611-6cb840108113")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 106.68 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3e1a4aa9-2337-4830-9313-0e1fd5ebd015")
+		(property "Reference" "C3"
+			(at 109.22 26.6762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 109.22 29.2162 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_Custom:SMD_0402-2"
+			(at 106.68 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 106.68 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d03c10ae-0144-45ee-94eb-8e38e762cb31")
+		)
+		(pin "1"
+			(uuid "5351abfb-fd32-4f37-96ed-772daf419181")
+		)
+		(instances
+			(project ""
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -1474,6 +2084,205 @@
 			(project ""
 				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 118.11 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "beca014f-2192-4668-bb42-3342467b8340")
+		(property "Reference" "#PWR049"
+			(at 118.11 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 118.11 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 118.11 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce0cd3fd-4e9c-42f2-9df5-677025e22ae8")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "#PWR049")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 129.54 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e855d42f-4086-4ff2-8187-beb4f9cba899")
+		(property "Reference" "#PWR051"
+			(at 129.54 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 129.54 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "289aa3c8-f8d8-4daa-8bdc-6176e8082a7a")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "#PWR051")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V0")
+		(at 118.11 24.13 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ff01ad48-495c-4994-a578-0d4ff5e59daa")
+		(property "Reference" "#PWR048"
+			(at 118.11 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V0"
+			(at 118.11 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V0\""
+			(at 118.11 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c353901-7d60-4233-8563-53cf4d3806fb")
+		)
+		(instances
+			(project "WristWatch"
+				(path "/fa78ac01-f44d-4d2a-889a-213ee2d7711c/baa28f17-df1b-4af3-87b8-e09b393ce4be"
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
