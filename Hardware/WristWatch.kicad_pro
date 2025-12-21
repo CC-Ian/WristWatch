@@ -195,6 +195,8 @@
       "track_widths": [
         0.0,
         0.127,
+        0.1524,
+        0.1778,
         0.2,
         0.25,
         0.3,
@@ -470,6 +472,7 @@
       "single_global_label": "ignore",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
+      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -642,6 +645,10 @@
     [
       "99f7d2ad-3ee3-40fe-84d2-daa857bf62f8",
       "LED Array"
+    ],
+    [
+      "48b428d0-0ac5-4ff0-aa96-29f30747e1b3",
+      "BMS"
     ]
   ],
   "text_variables": {}

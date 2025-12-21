@@ -1,4 +1,5 @@
 (sym_lib_table
   (version 7)
   (lib (name "ESP8285")(type "KiCad")(uri "${KIPRJMOD}/esp8285/ESP8285.kicad_sym")(options "")(descr ""))
+  (lib (name "VEML6030")(type "KiCad")(uri "${KIPRJMOD}/VEML6030/VEML6030.kicad_sym")(options "")(descr ""))
 )
