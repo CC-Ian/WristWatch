@@ -9,6 +9,7 @@
 #include "nvs_flash.h"
 #include "driver/gpio.h"
 #include "driver/i2c.h"
+#include "esp_adc/adc_oneshot.h"
 #include "esp_sleep.h"
 #include "esp_sntp.h"
 #include "esp_system.h"
@@ -22,6 +23,12 @@
 #define I2C_MASTER_SCL  19
 #define I2C_MASTER_NUM  I2C_NUM_0
 #define I2C_FREQ_HZ     400000
+
+// ====================== IMU =====================
+#define BAT_MEAS_ADC 4
+#define BMS_STATUS_N 5
+#define VEML_SUPPLY 6
+#define BAT_MEAS_EN_N 7
 
 // ====================== IMU =====================
 #define LIS2DW12_I2C_ADDRESS 0x19
@@ -281,6 +288,96 @@ static void display_time(void)
     ESP_LOGI(TAG, "LEDs off after 10s");
 }
 
+
+static void configure_gpio(int pinNumber, gpio_mode_t mode, gpio_pullup_t pullUp, gpio_pulldown_t pullDown) {
+    // Configure GPIO Pin
+    gpio_config_t io_conf = {
+        .pin_bit_mask = (1ULL << pinNumber),
+        .mode = mode,
+        .pull_up_en = pullUp,
+        .pull_down_en = pullDown,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf);
+}
+
+// ========== Display Charging Percent ==========
+static void display_charge_percent(void)
+{
+    configure_gpio(BAT_MEAS_EN_N, GPIO_MODE_OUTPUT, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_DISABLE);
+    configure_gpio(BAT_MEAS_ADC, GPIO_MODE_INPUT, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_DISABLE);
+    init_led_strip();
+    enable_leds(true);
+    clear_strip();
+
+    int adc_value;
+    adc_oneshot_unit_handle_t adc_handle;
+
+    // Initialize ADC Oneshot Mode Driver on the ADC Unit
+    adc_oneshot_unit_init_cfg_t init_config = {
+        .unit_id = ADC_UNIT_1,
+        .clk_src = ADC_DIGI_CLK_SRC_DEFAULT
+    };
+    ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config, &adc_handle));
+
+    // Configure ADC channel
+    adc_oneshot_chan_cfg_t config = {
+        .bitwidth = ADC_BITWIDTH_12,
+        .atten = ADC_ATTEN_DB_12,
+    };
+    ESP_ERROR_CHECK(adc_oneshot_config_channel(adc_handle, ADC_CHANNEL_4, &config));
+
+    // Simple moving average smoothing
+    const int SMOOTH_N = 8;
+    int adc_buffer[SMOOTH_N];
+    int buffer_index = 0;
+    int buffer_filled = 0;
+
+    // While the BMS Status Pin is pulled Low
+    while (!gpio_get_level(BMS_STATUS_N) && !gpio_get_level(BMS_STATUS_N)) {
+        // Read ADC value with Oneshot
+        ESP_ERROR_CHECK(adc_oneshot_read(adc_handle, ADC_CHANNEL_4, &adc_value));
+
+        // Store in buffer
+        adc_buffer[buffer_index] = adc_value;
+        buffer_index = (buffer_index + 1) % SMOOTH_N;
+        if (buffer_filled < SMOOTH_N) buffer_filled++;
+
+        // Compute average
+        int sum = 0;
+        for (int i = 0; i < buffer_filled; i++) {
+            sum += adc_buffer[i];
+        }
+        float avg_adc = (float)sum / buffer_filled;
+
+        float voltage = ((avg_adc / 4095.0f) * 2.50f) * (2.20f); // ADC to voltage conversion
+        ESP_LOGI(TAG, "ADC Value (smoothed): %.1f, Voltage: %.2f V", avg_adc, voltage);
+
+        // 3.20v to 4.20v maps to 0% to 100%
+        int percent = (int)(((voltage - 3.20f) / (4.20f - 3.20f)) * 100.0f);
+        if (percent < 0) percent = 0;
+        if (percent > 100) percent = 100;
+        ESP_LOGI(TAG, "Battery Charge: %d%%", percent);
+        int leds_to_light = (percent * NUM_LEDS) / 100;
+
+        led_strip_clear(led_strip);
+
+        for (int i = 0; i < leds_to_light; i++) {
+            int ledIndex = 59 - ((i + 29) % NUM_LEDS);
+            led_strip_set_pixel(led_strip, ledIndex, 0, 2, 0); // green
+        }
+
+        led_strip_refresh(led_strip);
+
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+
+    configure_gpio(BAT_MEAS_EN_N, GPIO_MODE_INPUT, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_DISABLE);
+    clear_strip();
+    enable_leds(false);
+    ESP_LOGI(TAG, "LEDs off after 10s");
+}
+
 // ========== Setup Deep Sleep ==========
 static void enter_deep_sleep(void)
 {
@@ -295,6 +392,9 @@ static void enter_deep_sleep(void)
 
     // Configure IMU interrupt as wakeup source
     esp_deep_sleep_enable_gpio_wakeup((1ULL << IMU_INT_PIN), ESP_GPIO_WAKEUP_GPIO_HIGH); // High level triggers wake
+
+    // Configure BMS Status Pin as wakeup source.
+    esp_deep_sleep_enable_gpio_wakeup((1ULL << BMS_STATUS_N), ESP_GPIO_WAKEUP_GPIO_LOW); // Low level triggers wake
 
     // Configure weekly wakeup (Wed 00:00)
     // For now, simulate with fixed interval (e.g. 7 days * 24h * 3600s)
@@ -321,6 +421,16 @@ void app_main(void)
     setenv("TZ", "EST5EDT,M3.2.0/2,M11.1.0/2", 1);
     tzset();
 
+    // Configure BMS GPIO
+    gpio_config_t io_conf = {
+        .pin_bit_mask = (1ULL << BMS_STATUS_N),
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = GPIO_PULLUP_ENABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf);
+
     // Check wakeup reason
     esp_sleep_wakeup_cause_t cause = esp_sleep_get_wakeup_cause();
 
@@ -343,8 +453,13 @@ void app_main(void)
         }
     }
     else if (cause == ESP_SLEEP_WAKEUP_GPIO) {
-        ESP_LOGI(TAG, "Wakeup from IMU interrupt");
-        display_time();
+        if (gpio_get_level(BMS_STATUS_N)) {
+            ESP_LOGI(TAG, "Wakeup from IMU interrupt.");
+            display_time();
+        } else {
+            ESP_LOGI(TAG, "Wakeup from BMS interrupt.");
+            display_charge_percent();
+        }
     }
     else if (cause == ESP_SLEEP_WAKEUP_TIMER) {
         ESP_LOGI(TAG, "Weekly wakeup: sync RTC via WiFi");

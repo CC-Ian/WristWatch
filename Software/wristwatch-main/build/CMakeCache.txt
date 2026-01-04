@@ -150,7 +150,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=wristwatch-main
+CMAKE_PROJECT_NAME:STATIC=wristwatch-idf-pain
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -221,13 +221,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-wristwatch-main_BINARY_DIR:STATIC=/home/ian/Documents/projects/WristWatch/Software/wristwatch-main/build
+wristwatch-idf-pain_BINARY_DIR:STATIC=/home/ian/Documents/projects/WristWatch/Software/wristwatch-main/build
 
 //Value Computed by CMake
-wristwatch-main_IS_TOP_LEVEL:STATIC=ON
+wristwatch-idf-pain_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-wristwatch-main_SOURCE_DIR:STATIC=/home/ian/Documents/projects/WristWatch/Software/wristwatch-main
+wristwatch-idf-pain_SOURCE_DIR:STATIC=/home/ian/Documents/projects/WristWatch/Software/wristwatch-main
 
 
 ########################
