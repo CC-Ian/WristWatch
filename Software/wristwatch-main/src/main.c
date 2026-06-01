@@ -12,7 +12,6 @@
 #include "esp_adc/adc_oneshot.h"
 #include "esp_sleep.h"
 #include "esp_sntp.h"
-#include "esp_system.h"
 #include "esp_timer.h"
 #include "time.h"
 
@@ -42,45 +41,54 @@
 
 // ===================== LEDS  ====================
 #include "led_strip.h"
-#include "esp_log.h"
 #include "esp_err.h"
 #define LED_STRIP_RMT_CHANNEL RMT_CHANNEL_0
 #define LED_STRIP_RES_HZ      (10 * 1000 * 1000) // 10MHz resolution
 #define NUM_LEDS              60
 #define LED_DATA_PIN          10   // change to your pin
 #define LED_EN_PIN            2  // PMOSFET enable pin (active low)
-static led_strip_handle_t led_strip;
+static led_strip_handle_t led_strip = NULL; // initialize once and reuse
 
 static const char *TAG = "wristwatch";
 
 // Flag to indicate WiFi time sync complete
 static bool time_synced = false;
 
+// Helper: convert a logical position (seconds/minutes/hours mapped 0..59) to physical LED index
+static inline int led_index_from_pos(int pos)
+{
+    return (NUM_LEDS - 1) - ((pos + 29) % NUM_LEDS);
+}
+
 static void init_led_strip(void)
 {
+    if (led_strip) {
+        return; // already created
+    }
+
     // LED strip general initialization, according to your led board design
     led_strip_config_t strip_config = {
-        .strip_gpio_num = LED_DATA_PIN,   // The GPIO that connected to the LED strip's data line
-        .max_leds = NUM_LEDS,        // The number of LEDs in the strip,
-        .led_pixel_format = LED_PIXEL_FORMAT_GRB, // Pixel format of your LED strip
-        .led_model = LED_MODEL_WS2812,            // LED strip model
-        .flags.invert_out = false,                // whether to invert the output signal
+        .strip_gpio_num = LED_DATA_PIN,
+        .max_leds = NUM_LEDS,
+        .led_pixel_format = LED_PIXEL_FORMAT_GRB,
+        .led_model = LED_MODEL_WS2812,
+        .flags.invert_out = false,
     };
 
     // LED strip backend configuration: RMT
     led_strip_rmt_config_t rmt_config = {
-        .clk_src = RMT_CLK_SRC_DEFAULT,        // different clock source can lead to different power consumption
-        .resolution_hz = (10 * 1000 * 1000), // RMT counter clock frequency
-        .flags.with_dma = false,               // DMA feature is available on ESP target like ESP32-S3
+        .clk_src = RMT_CLK_SRC_DEFAULT,
+        .resolution_hz = LED_STRIP_RES_HZ,
+        .flags.with_dma = false,
     };
 
-    // LED Strip object handle
     ESP_ERROR_CHECK(led_strip_new_rmt_device(&strip_config, &rmt_config, &led_strip));
     ESP_LOGI(TAG, "Created LED strip object with RMT backend");
 
-    // Setup PMOS enable pin
+    // Setup PMOS enable pin and disable LEDs by default
     gpio_reset_pin(LED_EN_PIN);
     gpio_set_direction(LED_EN_PIN, GPIO_MODE_OUTPUT);
+    gpio_set_level(LED_EN_PIN, 1); // active low -> 1 disables
 }
 
 // ========== Event Handler ==========
@@ -127,13 +135,10 @@ static void wifi_init_sta(void)
                                                         NULL,
                                                         NULL));
 
-    wifi_config_t wifi_config = {
-        .sta = {
-            .ssid = WIFI_SSID,
-            .password = WIFI_PASS,
-            .threshold.authmode = WIFI_AUTH_WPA2_PSK,
-        },
-    };
+    wifi_config_t wifi_config = { 0 };
+    strncpy((char *)wifi_config.sta.ssid, WIFI_SSID, sizeof(wifi_config.sta.ssid));
+    strncpy((char *)wifi_config.sta.password, WIFI_PASS, sizeof(wifi_config.sta.password));
+    wifi_config.sta.threshold.authmode = WIFI_AUTH_WPA2_PSK;
 
     ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
     ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &wifi_config));
@@ -177,7 +182,7 @@ uint64_t time_until_next_wednesday_midnight_us(void)
     return (uint64_t)(target_time - now) * 1000000ULL;
 }
 
-// ========== IMU Init (stub) ==========
+// ========== IMU Init ==========
 static void imu_init(void) {
     i2c_config_t conf = {
         .mode = I2C_MODE_MASTER,
@@ -190,25 +195,18 @@ static void imu_init(void) {
     ESP_ERROR_CHECK(i2c_param_config(I2C_MASTER_NUM, &conf));
     ESP_ERROR_CHECK(i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0));
 
-    // Ctrl1: 12.5Hz, Low Power Mode, LP Mode 1 (~1uA @1v8)
+    // Configure IMU registers (one-time setup)
     ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL1, 0x20));
-
-    // Ctrl6: High Pass enabled? +-4g FS
-    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL6, 0b00011000)); // High-pass filter disabled
-
-    // Ctrl7: Enable interrupts
+    ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL6, 0b00011000));
     ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL7, 0x20));
-
-    // Wakeup duration 2? samples above threshold. Really odd bits.
     ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_WAKE_UP_DUR, 0b01100000));
-
-    // Wakeup threshold in gs LSB = 1/64 FS. FS is 4G. This is set as 0.75g.
     ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_WAKE_UP_THS, 0b00001100));
-
-    // Interrupt1 pulse wakeup signal
     ESP_ERROR_CHECK(imu_write_reg(LIS2DW12_REG_CTRL4_INT1_PAD_CTRL, 0x20));
 
-    ESP_LOGI(TAG, "IMU configured");
+    // We only needed the I2C driver to program the device once; free it to save RAM/power
+    i2c_driver_delete(I2C_MASTER_NUM);
+
+    ESP_LOGI(TAG, "IMU configured (I2C driver uninstalled to save resources)");
 }
 
 /// @brief Set LED enable pin
@@ -220,6 +218,7 @@ static void enable_leds(bool state)
 
 static void clear_strip(void)
 {
+    if (!led_strip) return;
     led_strip_clear(led_strip);
     led_strip_refresh(led_strip);
 }
@@ -231,66 +230,63 @@ static void display_time(void)
     enable_leds(true);
     clear_strip();
 
-    int64_t start_time = esp_timer_get_time() / 1000; // ms
+    const int64_t duration_us = 10 * 1000 * 1000ULL; // 10 seconds in microseconds
+    const int64_t deadline = esp_timer_get_time() + duration_us;
 
-    while ((esp_timer_get_time() / 1000) - start_time < 10000) { // 10s
-        time_t now;
+    while (esp_timer_get_time() < deadline) {
+        time_t now = time(NULL);
         struct tm timeinfo;
-        time(&now);
         localtime_r(&now, &timeinfo);
 
         uint8_t hour = timeinfo.tm_hour;
         uint8_t minute = timeinfo.tm_min;
         uint8_t second = timeinfo.tm_sec;
 
-        uint8_t hourIndex   = 59 - ((((hour * 60 + minute) / 24) + 29) % NUM_LEDS);
-        uint8_t minuteIndex = 59 - ((minute + 29) % NUM_LEDS);
-        uint8_t secondIndex = 59 - ((second + 29) % NUM_LEDS);
+        int hourIndex   = led_index_from_pos(((hour * 60 + minute) / 24) % NUM_LEDS);
+        int minuteIndex = led_index_from_pos(minute % NUM_LEDS);
+        int secondIndex = led_index_from_pos(second % NUM_LEDS);
 
         led_strip_clear(led_strip);
-        // Color mixing logic
+
+        // Color mixing and overlap handling
         if (hourIndex == minuteIndex && minuteIndex == secondIndex) {
-            // All three overlap: White (red + green + blue)
             led_strip_set_pixel(led_strip, hourIndex, 5, 5, 5);
         } else {
             // Hour pixel
             if (hourIndex == secondIndex && hourIndex != minuteIndex) {
-                // Purple (blue + red)
                 led_strip_set_pixel(led_strip, hourIndex, 5, 0, 5);
             } else if (hourIndex == minuteIndex && hourIndex != secondIndex) {
-                // Cyan (green + blue)
                 led_strip_set_pixel(led_strip, hourIndex, 0, 5, 5);
-            } else if (hourIndex != minuteIndex && hourIndex != secondIndex) {
-                led_strip_set_pixel(led_strip, hourIndex, 0, 0, 5); // blue
+            } else {
+                led_strip_set_pixel(led_strip, hourIndex, 0, 0, 5);
             }
+
             // Minute pixel
             if (minuteIndex == secondIndex && minuteIndex != hourIndex) {
-                // Yellow (red + green)
                 led_strip_set_pixel(led_strip, minuteIndex, 5, 5, 0);
             } else if (minuteIndex == hourIndex && minuteIndex != secondIndex) {
-                // Cyan (green + blue)
                 led_strip_set_pixel(led_strip, minuteIndex, 0, 5, 5);
-            } else if (minuteIndex != hourIndex && minuteIndex != secondIndex) {
-                led_strip_set_pixel(led_strip, minuteIndex, 0, 5, 0); // green
+            } else {
+                led_strip_set_pixel(led_strip, minuteIndex, 0, 5, 0);
             }
-            // Second pixel
+
+            // Second pixel (only red if unique)
             if (secondIndex != hourIndex && secondIndex != minuteIndex) {
-                led_strip_set_pixel(led_strip, secondIndex, 5, 0, 0); // red
+                led_strip_set_pixel(led_strip, secondIndex, 5, 0, 0);
             }
         }
-        led_strip_refresh(led_strip);
 
+        led_strip_refresh(led_strip);
         vTaskDelay(pdMS_TO_TICKS(100));
     }
 
     clear_strip();
     enable_leds(false);
-    ESP_LOGI(TAG, "LEDs off after 10s");
+    ESP_LOGI(TAG, "LEDs off after display_time");
 }
 
 
 static void configure_gpio(int pinNumber, gpio_mode_t mode, gpio_pullup_t pullUp, gpio_pulldown_t pullDown) {
-    // Configure GPIO Pin
     gpio_config_t io_conf = {
         .pin_bit_mask = (1ULL << pinNumber),
         .mode = mode,
@@ -298,7 +294,7 @@ static void configure_gpio(int pinNumber, gpio_mode_t mode, gpio_pullup_t pullUp
         .pull_down_en = pullDown,
         .intr_type = GPIO_INTR_DISABLE
     };
-    gpio_config(&io_conf);
+    ESP_ERROR_CHECK(gpio_config(&io_conf));
 }
 
 // ========== Display Charging Percent ==========
@@ -310,97 +306,84 @@ static void display_charge_percent(void)
     enable_leds(true);
     clear_strip();
 
-    int adc_value;
-    adc_oneshot_unit_handle_t adc_handle;
+    int adc_value = 0;
+    adc_oneshot_unit_handle_t adc_handle = NULL;
 
-    // Initialize ADC Oneshot Mode Driver on the ADC Unit
     adc_oneshot_unit_init_cfg_t init_config = {
         .unit_id = ADC_UNIT_1,
         .clk_src = ADC_DIGI_CLK_SRC_DEFAULT
     };
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_config, &adc_handle));
 
-    // Configure ADC channel
     adc_oneshot_chan_cfg_t config = {
         .bitwidth = ADC_BITWIDTH_12,
         .atten = ADC_ATTEN_DB_12,
     };
     ESP_ERROR_CHECK(adc_oneshot_config_channel(adc_handle, ADC_CHANNEL_4, &config));
 
-    // Simple moving average smoothing
     const int SMOOTH_N = 8;
-    int adc_buffer[SMOOTH_N];
+    int adc_buffer[SMOOTH_N] = {};
     int buffer_index = 0;
     int buffer_filled = 0;
 
-    // While the BMS Status Pin is pulled Low
-    while (!gpio_get_level(BMS_STATUS_N) && !gpio_get_level(BMS_STATUS_N)) {
-        // Read ADC value with Oneshot
+    // While the BMS Status Pin is pulled low (charging) keep showing the charge level
+    while (!gpio_get_level(BMS_STATUS_N)) {
         ESP_ERROR_CHECK(adc_oneshot_read(adc_handle, ADC_CHANNEL_4, &adc_value));
 
-        // Store in buffer
         adc_buffer[buffer_index] = adc_value;
         buffer_index = (buffer_index + 1) % SMOOTH_N;
         if (buffer_filled < SMOOTH_N) buffer_filled++;
 
-        // Compute average
         int sum = 0;
-        for (int i = 0; i < buffer_filled; i++) {
-            sum += adc_buffer[i];
-        }
+        for (int i = 0; i < buffer_filled; i++) sum += adc_buffer[i];
         float avg_adc = (float)sum / buffer_filled;
 
-        float voltage = ((avg_adc / 4095.0f) * 2.50f) * (2.20f); // ADC to voltage conversion
+        float voltage = ((avg_adc / 4095.0f) * 2.50f) * (2.20f);
         ESP_LOGI(TAG, "ADC Value (smoothed): %.1f, Voltage: %.2f V", avg_adc, voltage);
 
-        // 3.20v to 4.20v maps to 0% to 100%
         int percent = (int)(((voltage - 3.20f) / (4.20f - 3.20f)) * 100.0f);
         if (percent < 0) percent = 0;
         if (percent > 100) percent = 100;
         ESP_LOGI(TAG, "Battery Charge: %d%%", percent);
+
         int leds_to_light = (percent * NUM_LEDS) / 100;
-
         led_strip_clear(led_strip);
-
         for (int i = 0; i < leds_to_light; i++) {
-            int ledIndex = 59 - ((i + 29) % NUM_LEDS);
-            led_strip_set_pixel(led_strip, ledIndex, 0, 2, 0); // green
+            int ledIndex = led_index_from_pos(i);
+            led_strip_set_pixel(led_strip, ledIndex, 0, 2, 0);
         }
-
         led_strip_refresh(led_strip);
 
-        vTaskDelay(pdMS_TO_TICKS(100));
+        vTaskDelay(pdMS_TO_TICKS(200)); // slightly slower sample rate to save power
+    }
+
+    // Cleanup ADC resources
+    if (adc_handle) {
+        adc_oneshot_del_unit(adc_handle);
     }
 
     configure_gpio(BAT_MEAS_EN_N, GPIO_MODE_INPUT, GPIO_PULLUP_DISABLE, GPIO_PULLDOWN_DISABLE);
     clear_strip();
     enable_leds(false);
-    ESP_LOGI(TAG, "LEDs off after 10s");
+    ESP_LOGI(TAG, "LEDs off after display_charge_percent");
 }
 
 // ========== Setup Deep Sleep ==========
 static void enter_deep_sleep(void)
 {
-    // Stop WiFi stack cleanly if it was started
+    // Stop WiFi stack cleanly if it was started (ignore errors)
     esp_wifi_stop();
     esp_wifi_deinit();
     esp_netif_deinit();
     esp_event_loop_delete_default();
 
-    // De-Init I2C driveresp_deep_sleep_enable_gpio_wakeup
-    i2c_driver_delete(I2C_MASTER_NUM);
-
     // Configure IMU interrupt as wakeup source
-    esp_deep_sleep_enable_gpio_wakeup((1ULL << IMU_INT_PIN), ESP_GPIO_WAKEUP_GPIO_HIGH); // High level triggers wake
+    esp_deep_sleep_enable_gpio_wakeup((1ULL << IMU_INT_PIN), ESP_GPIO_WAKEUP_GPIO_HIGH);
 
     // Configure BMS Status Pin as wakeup source.
-    esp_deep_sleep_enable_gpio_wakeup((1ULL << BMS_STATUS_N), ESP_GPIO_WAKEUP_GPIO_LOW); // Low level triggers wake
+    esp_deep_sleep_enable_gpio_wakeup((1ULL << BMS_STATUS_N), ESP_GPIO_WAKEUP_GPIO_LOW);
 
     // Configure weekly wakeup (Wed 00:00)
-    // For now, simulate with fixed interval (e.g. 7 days * 24h * 3600s)
-    // uint64_t wake_interval_us = 7ULL * 24ULL * 3600ULL * 1000000ULL;
-    // For now, simulate with fixed interval 5 minutes for validation of logics.
-    // uint64_t wake_interval_us = 300ULL * 1000000ULL;
     esp_sleep_enable_timer_wakeup(time_until_next_wednesday_midnight_us());
 
     ESP_LOGI(TAG, "Entering deep sleep...");
